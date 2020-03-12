@@ -40,6 +40,6 @@ def create_app(config=None, debug=False):
     # # return app
     with app.app_context():
         # register Blueprints.
-        app.register_blueprint(food_routes.food_bp)
+        app.register_blueprint(food_routes.food_bp, url_prefix="/v1/api")
 
     return app
